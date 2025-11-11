@@ -107,10 +107,7 @@ The initial RDP login appeared to use valid credentials and did not generate an 
 
 ---
 
-### Contributors
 
-- **Investigation Lead:** Abe O
-- **Project Owner:** Zach Balrog
 
 ---
 

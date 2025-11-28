@@ -126,18 +126,18 @@
 ## Post-Incident Actions Taken
 
 ### Immediate Response (Day 0)
-- ✅ Host isolated and contained
-- ✅ Malicious persistence removed
-- ✅ Administrator credentials rotated
-- ✅ IOCs (IPs, hashes, domains) blocked
-- ✅ Forensic data collected
+- Host isolated and contained
+- Malicious persistence removed
+- Administrator credentials rotated
+- IOCs (IPs, hashes, domains) blocked
+- Forensic data collected
 
 ### Follow-Up Actions (Day 1+)
-- ✅ Full investigation report completed
-- ⚠️ Domain controller rebuild recommended
-- ⚠️ MFA enforcement on all admin accounts
-- ⚠️ RDP access restriction via VPN/JIT
-- ⚠️ Network segmentation review
+- Full investigation report completed
+- Domain controller rebuild recommended
+- MFA enforcement on all admin accounts
+- RDP access restriction via VPN/JIT
+- Network segmentation review
 
 ---
 
@@ -156,17 +156,17 @@ The initial RDP login appeared legitimate (valid credentials) and did not trigge
 - C2 network beaconing observed
 
 ### Positive Indicators
-- ✅ No lateral movement detected
-- ✅ No data exfiltration observed
-- ✅ No access to file servers or client data
-- ✅ Fast automated containment once detected
-- ✅ Complete forensic telemetry available
+- No lateral movement detected
+- No data exfiltration observed
+- No access to file servers or client data
+- Fast automated containment once detected
+- Complete forensic telemetry available
 
 ### Risk Factors
-- ⚠️ Domain admin access achieved
-- ⚠️ 30-minute window before detection
-- ⚠️ Persistence mechanism established
-- ⚠️ Multiple malicious binaries deployed
+- Domain admin access achieved
+- 30-minute window before detection
+- Persistence mechanism established
+- Multiple malicious binaries deployed
 
 ---
 

@@ -295,23 +295,23 @@ level: medium
 ## Response Actions
 
 ### Immediate
-- ✅ Block IP 185.220.101.160 at firewall
-- ✅ Quarantine malicious file hashes
-- ✅ Remove scheduled task "Java"
-- ✅ Rotate Administrator credentials
-- ✅ Isolate mts-dc.mts.local
+- Block IP 185.220.101.160 at firewall
+- Quarantine malicious file hashes
+- Remove scheduled task "Java"
+- Rotate Administrator credentials
+- Isolate mts-dc.mts.local
 
 ### Short-Term
-- ⚠️ Deploy IOC hunting queries across environment
-- ⚠️ Review all RDP logins from public IPs
-- ⚠️ Implement MFA on all admin accounts
-- ⚠️ Restrict RDP to VPN-only access
+- Deploy IOC hunting queries across environment
+- Review all RDP logins from public IPs
+- Implement MFA on all admin accounts
+- Restrict RDP to VPN-only access
 
 ### Long-Term
-- ⚠️ Rebuild domain controller from trusted backup
-- ⚠️ Implement JIT (Just-in-Time) privileged access
-- ⚠️ Deploy network segmentation
-- ⚠️ Enhance endpoint detection coverage
+- Rebuild domain controller from trusted backup
+- Implement JIT (Just-in-Time) privileged access
+- Deploy network segmentation
+- Enhance endpoint detection coverage
 
 ---
 

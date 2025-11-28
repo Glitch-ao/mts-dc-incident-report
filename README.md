@@ -95,7 +95,7 @@ A burst of 40 failed login attempts was identified against the Administrator acc
 
 #### 2. Why didn't automated response trigger for 30 minutes?
 
-The initial RDP login appeared to use valid credentials and did not generate an automatic response. Microsoft Defender only escalated the incident once the attacker began disabling security controls and executing suspicious scripts—these behavioral signals triggered the automated investigation at 08:32 UTC.
+The initial RDP login appeared to use valid credentials and did not generate an automatic response. Microsoft Defender only escalated the incident once the attacker began disabling security controls and executing suspicious scripts these behavioral signals triggered the automated investigation at 08:32 UTC.
 
 #### 3. Was any data accessed or exfiltrated?
 

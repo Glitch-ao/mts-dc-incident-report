@@ -73,7 +73,7 @@ See [timeline/timeline.md](timeline/timeline.md) for detailed event-by-event bre
 
 ### Current Status
 
-✅ **CONTAINED** - Host isolated, persistence removed, credentials rotated, IOCs blocked
+**CONTAINED** - Host isolated, persistence removed, credentials rotated, IOCs blocked
 
 ---
 

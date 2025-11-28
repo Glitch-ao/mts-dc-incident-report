@@ -97,7 +97,7 @@ javaw.exe -jar C Files.exe
 ## Account Indicators
 
 ### Compromised Accounts
-- **Administrator@mts.local**
+- **Administrator@[Redacted]**
   - **First Compromise:** Suspected 2025-11-03 (brute-force activity)
   - **Confirmed Use:** 2025-11-04 08:02:02 UTC (RDP from Tor)
   - **Action:** Password rotated, enforce MFA
@@ -131,7 +131,7 @@ javaw.exe -jar C Files.exe
 DeviceLogonEvents
 | where TimeGenerated between (datetime(2025-11-03) .. now())
 | where LogonType == "RemoteInteractive"
-| where RemoteIP in ("185.220.101.160") // Add other known Tor exit nodes
+| where RemoteIP in ("185.220.101.160") 
 | project TimeGenerated, DeviceName, AccountName, RemoteIP, LogonType, ActionType
 | order by TimeGenerated desc
 ```

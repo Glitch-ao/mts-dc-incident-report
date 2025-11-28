@@ -14,7 +14,7 @@ Following the unauthorized RDP access to the domain controller (mts-dc.mts.local
 ## Immediate Actions (Complete Within 24-48 Hours)
 
 ### 1. Confirm Automated Containment
-- ✅ **Status:** COMPLETED
+- **Status:** COMPLETED
 - **Action:** Verify Microsoft Defender isolated mts-dc.mts.local and removed all malicious artifacts
 - **Validation:**
   - Confirm scheduled task "Java" has been deleted
@@ -22,7 +22,7 @@ Following the unauthorized RDP access to the domain controller (mts-dc.mts.local
   - Confirm C2 network connections are blocked
 
 ### 2. Credential Rotation
-- ✅ **Status:** COMPLETED
+- **Status:** COMPLETED
 - **Action:** Rotate Administrator and all domain admin credentials
 - **Additional Steps:**
   - Reset passwords for all service accounts
@@ -30,7 +30,7 @@ Following the unauthorized RDP access to the domain controller (mts-dc.mts.local
   - Force password reset for any accounts accessed during compromise window
 
 ### 3. Block Indicators of Compromise
-- ✅ **Status:** COMPLETED
+- **Status:** COMPLETED
 - **IOCs Blocked:**
   - IP Address: 185.220.101.160 (Tor exit node)
   - Domain: filebin.net
@@ -42,7 +42,7 @@ Following the unauthorized RDP access to the domain controller (mts-dc.mts.local
   - EDR/XDR platforms
 
 ### 4. Deploy IOC Hunting Queries
-- ⚠️ **Status:** IN PROGRESS
+- **Status:** IN PROGRESS
 - **Action:** Run KQL hunting queries (from ioc-list/iocs.md) across all endpoints
 - **Focus Areas:**
   - Additional RDP logins from Tor exit nodes
@@ -56,7 +56,7 @@ Following the unauthorized RDP access to the domain controller (mts-dc.mts.local
 ## Short-Term Actions (Complete Within 1 Week)
 
 ### 5. Rebuild Domain Controller
-- ⚠️ **Status:** RECOMMENDED
+- **Status:** RECOMMENDED
 - **Rationale:** Domain admin access was achieved; rebuilding ensures no persistent backdoors
 - **Steps:**
   1. Take forensic snapshot for long-term retention
@@ -68,7 +68,7 @@ Following the unauthorized RDP access to the domain controller (mts-dc.mts.local
 - **Timeline:** Within 3-5 days
 
 ### 6. Implement Multi-Factor Authentication (MFA)
-- ⚠️ **Status:** CRITICAL
+- **Status:** CRITICAL
 - **Scope:** Enforce MFA for:
   - All domain administrator accounts
   - All privileged accounts (server admins, security team)
@@ -80,7 +80,7 @@ Following the unauthorized RDP access to the domain controller (mts-dc.mts.local
 - **Timeline:** Within 1 week
 
 ### 7. Restrict RDP Access
-- ⚠️ **Status:** CRITICAL
+- **Status:** CRITICAL
 - **Actions:**
   - **Remove direct internet RDP exposure:** Disable port 3389 from public internet
   - **Implement VPN-only access:** Require VPN connection before RDP
@@ -90,7 +90,7 @@ Following the unauthorized RDP access to the domain controller (mts-dc.mts.local
 - **Timeline:** Within 3-5 days
 
 ### 8. Implement Just-in-Time (JIT) Privileged Access
-- ⚠️ **Status:** RECOMMENDED
+- **Status:** RECOMMENDED
 - **Solution:** Azure AD Privileged Identity Management (PIM) or similar
 - **Benefits:**
   - Admin rights granted only when needed
@@ -104,7 +104,7 @@ Following the unauthorized RDP access to the domain controller (mts-dc.mts.local
 ## Medium-Term Actions (Complete Within 1 Month)
 
 ### 9. Network Segmentation
-- ⚠️ **Status:** RECOMMENDED
+- **Status:** RECOMMENDED
 - **Actions:**
   - Isolate domain controllers in dedicated VLAN
   - Implement firewall rules restricting DC access to:
@@ -115,7 +115,7 @@ Following the unauthorized RDP access to the domain controller (mts-dc.mts.local
 - **Timeline:** Within 2-4 weeks
 
 ### 10. Enhanced Logging and Monitoring
-- ⚠️ **Status:** RECOMMENDED
+- **Status:** RECOMMENDED
 - **Actions:**
   - **Increase Windows Event Log retention:** Minimum 90 days
   - **Forward logs to SIEM:** Centralize DC logs in SIEM/Log Analytics
@@ -125,7 +125,7 @@ Following the unauthorized RDP access to the domain controller (mts-dc.mts.local
 - **Timeline:** Within 2-3 weeks
 
 ### 11. Deploy Detection Rules
-- ⚠️ **Status:** RECOMMENDED
+- **Status:** RECOMMENDED
 - **Actions:**
   - Implement Sigma rules (from ioc-list/iocs.md) in SIEM
   - Create alerts for:
@@ -137,7 +137,7 @@ Following the unauthorized RDP access to the domain controller (mts-dc.mts.local
 - **Timeline:** Within 2 weeks
 
 ### 12. Account Password Policy Review
-- ⚠️ **Status:** RECOMMENDED
+- **Status:** RECOMMENDED
 - **Actions:**
   - Increase minimum password length to 16+ characters
   - Implement password complexity requirements
@@ -147,7 +147,7 @@ Following the unauthorized RDP access to the domain controller (mts-dc.mts.local
 - **Timeline:** Within 2 weeks
 
 ### 13. Account Lockout Policy
-- ⚠️ **Status:** RECOMMENDED
+- **Status:** RECOMMENDED
 - **Current Issue:** 40 failed login attempts before lockout (too high)
 - **Recommended:** Lockout after 5-10 failed attempts
 - **Balance:** Security vs. user experience
@@ -159,7 +159,7 @@ Following the unauthorized RDP access to the domain controller (mts-dc.mts.local
 ## Long-Term Actions (Complete Within 3 Months)
 
 ### 14. Implement Privileged Access Workstation (PAW)
-- ⚠️ **Status:** RECOMMENDED
+- **Status:** RECOMMENDED
 - **Description:** Dedicated, hardened workstations for administrative tasks
 - **Benefits:**
   - Isolate admin activities from regular browsing/email
@@ -168,7 +168,7 @@ Following the unauthorized RDP access to the domain controller (mts-dc.mts.local
 - **Timeline:** Within 2-3 months
 
 ### 15. Deploy Endpoint Detection and Response (EDR) Enhancements
-- ⚠️ **Status:** IN PROGRESS
+- **Status:** IN PROGRESS
 - **Actions:**
   - Validate EDR coverage on all endpoints (100% deployment)
   - Enable tamper protection
@@ -178,7 +178,7 @@ Following the unauthorized RDP access to the domain controller (mts-dc.mts.local
 - **Timeline:** Within 1-2 months
 
 ### 16. Red Team / Penetration Testing
-- ⚠️ **Status:** RECOMMENDED
+- **Status:** RECOMMENDED
 - **Purpose:** Validate security improvements
 - **Focus Areas:**
   - RDP brute-force resistance
@@ -188,7 +188,7 @@ Following the unauthorized RDP access to the domain controller (mts-dc.mts.local
 - **Timeline:** Within 3 months (after remediation complete)
 
 ### 17. Security Awareness Training
-- ⚠️ **Status:** RECOMMENDED
+- **Status:** RECOMMENDED
 - **Topics:**
   - Password security best practices
   - Phishing awareness
@@ -198,7 +198,7 @@ Following the unauthorized RDP access to the domain controller (mts-dc.mts.local
 - **Timeline:** Within 2 months
 
 ### 18. Incident Response Plan Update
-- ⚠️ **Status:** RECOMMENDED
+- **Status:** RECOMMENDED
 - **Actions:**
   - Document lessons learned from this incident
   - Update IR playbooks for RDP compromise scenarios
@@ -235,9 +235,9 @@ Following the unauthorized RDP access to the domain controller (mts-dc.mts.local
 ## Risk Assessment
 
 ### Remaining Risks
-- ⚠️ **Medium:** Until DC is rebuilt, residual compromise risk remains
-- ⚠️ **Medium:** Without MFA, admin accounts remain vulnerable to credential theft
-- ⚠️ **Low:** With IOCs blocked and credentials rotated, immediate re-compromise risk is low
+- **Medium:** Until DC is rebuilt, residual compromise risk remains
+- **Medium:** Without MFA, admin accounts remain vulnerable to credential theft
+- **Low:** With IOCs blocked and credentials rotated, immediate re-compromise risk is low
 
 ### Risk Mitigation Priority
 1. **CRITICAL:** Implement MFA (eliminates 99% of credential attacks)
@@ -324,6 +324,6 @@ Following the unauthorized RDP access to the domain controller (mts-dc.mts.local
 ---
 
 **Report Prepared:** 2025-11-05  
-**Author:** Abe O (SOC Lead)  
+**Author:** Abe O   
 **Review Status:** Approved  
 **Next Review:** 2025-12-05 (30-day follow-up)
